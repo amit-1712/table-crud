@@ -31,7 +31,7 @@
   const fun = (data) => {
   for (const i in data) {
     if (typeof data[i] === 'object'){ 
-      printAllValues(data[i]);
+      fun(data[i]);
     } else {
       console.log(`key: ${i} : ${data[i]}`);
     }
