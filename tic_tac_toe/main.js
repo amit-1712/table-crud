@@ -1,5 +1,6 @@
 
 
+
 let isgameOver = false;
 let turn = 'X';
 
@@ -63,9 +64,8 @@ Array.from(boxes).forEach((element) => {
           "turn for " + turn;
 
       }
-      else if(isgameOver===true){
-          boxtext.innerText = " ";
-
+      else if(isgameOver==true){
+          turn = " ";
       }
 
       
