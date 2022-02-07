@@ -1,4 +1,4 @@
-
+'use strict'
 const letterDiv = document.querySelector('.letter-div');
 const hintButton = document.querySelector('.hint-btn');
 const resetButton = document.querySelector('.reset-btn');
@@ -43,32 +43,36 @@ const init = function (state) {
   } else if (state === 'reset') {
     letters.forEach(btn => {
       btn.classList.remove('disabled');
-      hintDiv.classList.add('hidden');
-      notif.classList.add('hidden');
+      
     });
-  }
-  select_word = getRandomWord(word_list);
+
+    hintDiv.classList.add('hidden');
+     notif.classList.add('hidden');
+  } 
+  
   lives = 5;
 
- 
+  
   letters = document.querySelectorAll('.alpha');
   liveSpan.textContent = lives;
 
-  
+  select_word = getRandomWord(word_list);
   for (let i = 0; i < select_word.length; i++) {
     const html = `<p class="word">_</p>`;
     wordDiv.insertAdjacentHTML('beforeend', html);
   }
+  
 };
 
-init('start');
+init("start");
+
 
 
 const showNotif = function (msg) {
   notif.classList.remove('hidden');
   notifSpan.textContent = select_word;
   notifContent.textContent = `You ${msg}`;
-  // lives = 3;
+  
 };
 
 
@@ -120,7 +124,7 @@ const letterPress = function () {
   this.classList.add('disabled');
 };
 
-s
+
 letters.forEach(btn => {
   btn.addEventListener('click', letterPress);
 });
