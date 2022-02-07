@@ -131,10 +131,7 @@ letters.forEach(btn => {
 });
 
 // Listening to hint btn
-hintButton.addEventListener('click', function () {
-  hintDiv.classList.remove('hidden');
-  hintText.textContent = words.get(select_word);
-});
+
 
 // listening to reset btn
 resetButton.addEventListener('click', function () {
