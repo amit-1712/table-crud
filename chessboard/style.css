@@ -1,9 +1,16 @@
-#chess-container{
-    border: 2px solid black;
-    height: 500px;
-    width: 500px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
+#chess-container span{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
     
+
+}
+
+#chess-container div:nth-child(odd) span:nth-child(even),
+#chess-container div:nth-child(even) span:nth-child(odd){
+    background-color: black;
+}
+#chess-container div:nth-child(even) span:nth-child(even),
+#chess-container div:nth-child(odd) span:nth-child(odd){
+    background-color: silver;
 }
